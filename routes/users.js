@@ -17,9 +17,9 @@ router.post('/register', function(req, res, next){ // ini untuk register user di
 
 
   if (!(email && password && retypepassword)) {
-    return res.json({success: false, message: 'authenticate failed. make sure u input the email and password'});
+    return res.json({success: false, message: 'authenticate failed. make sure you input the email and password'});
   }else if (password != retypepassword) {
-    return res.json({success: false, message: 'authenticate failed. make sure u input the email and password'})
+    return res.json({success: false, message: 'authenticate failed. make sure you input the email and password'})
   }
 
   var user = new User({
