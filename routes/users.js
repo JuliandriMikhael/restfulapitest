@@ -1,9 +1,14 @@
-var express = require('express');
-var router = express.Router();
+'use strict'
+
+const express = require('express');
+const router = express.Router();
+const config = require('../config');
+const jwt = require('jsonwebtoken');
+const User = require('../models/user');
+const checker = require('../helpers/checker');
+
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+
 
 module.exports = router;
