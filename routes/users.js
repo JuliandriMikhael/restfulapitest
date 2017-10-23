@@ -39,10 +39,10 @@ router.post('/register', function(req, res, next){ // ini untuk register user di
   })
 })
 
-  router.post('/login', function(req, res, next) {
-    User.findOne({
-      email: req.body.email
-    })
-  }); //fungsi login
+  // router.post('/login', function(req, res, next) {
+  //   User.findOne({
+  //     email: req.body.email
+  //   })
+  // }); //fungsi login
 
 module.exports = router;
