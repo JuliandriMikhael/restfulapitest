@@ -39,10 +39,22 @@ router.post('/register', function(req, res, next){ // ini untuk register user di
   })
 })
 
-  // router.post('/login', function(req, res, next) {
-  //   User.findOne({
-  //     email: req.body.email
-  //   })
-  // }); //fungsi login
+  router.post('/login', function(req, res, next) {
+    User.findOne({
+      email: req.body.email
+    }, function(err, user) {
+      if (err) throw err;
+      if (user != user){
+        res.json({success: false, meesage: 'auhenctication failed. User not found'})
+      }else if (user) {
+        if(user.password != req.body.password){
+          res.json({success: false, message: 'auth failed. password is not match'})
+        }else {
+      
+        }
+      }
+
+    })
+  }); //fungsi login
 
 module.exports = router;
