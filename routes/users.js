@@ -56,10 +56,10 @@ router.post('/register', function(req, res, next){ // ini untuk register user di
               expiresIn: 86400
             })
             res.json({
-        //       success: true,
-        //       data: {email:user.email},
-        //       token:token
-        //     })
+              success: true,
+              data: {email:user.email},
+              token:token
+            })
         // }
       }
 
