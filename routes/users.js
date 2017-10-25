@@ -66,4 +66,8 @@ router.post('/register', function(req, res, next){ // ini untuk register user di
     })
   }); //fungsi login
 
+  router.post('/check', function(req, res, next){
+    
+  })
+
 module.exports = router;
