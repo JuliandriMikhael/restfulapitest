@@ -28,5 +28,14 @@ router.post('/input', function(req, res){
 //read
 router.get('/browse', function(req, res){
   Data.findOne({
-    letter:"A" 
+    letter:"A"
   }, function(err, data) {
+    if (err) throw err;
+    res.json({
+      data:{
+      _id: data._id,
+      letter: data.letter,
+      frequency: 1.1}
+    })
+  })
+})
