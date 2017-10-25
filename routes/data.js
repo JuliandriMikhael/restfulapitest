@@ -17,3 +17,10 @@ router.post('/input', function(req, res){
         success: true,
         message: "data has been added",
         data:{
+          _id: data._id,
+          letter: data.letter,
+          frequency: data.frequency
+        }
+      })
+  })
+})
