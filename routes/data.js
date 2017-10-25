@@ -12,7 +12,7 @@ router.post('/input', function(req, res){
   })
   data.save(function(err){
     if (err) throw err;
-      console.log('User saved succesfully'); // ini fungsi kalo dia bisa login dan ngirim pesan
+      console.log('User saved succesfully'); 
       res.json({
         success: true,
         message: "data has been added",
