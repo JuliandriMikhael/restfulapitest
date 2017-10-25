@@ -26,7 +26,7 @@ router.post('/input', function(req, res){
 })
 
 //read
-router.get('/browse', function(req, res){ // ini itu cuma percobaan alias prototype
+router.get('/browse', function(req, res){
   Data.findOne({
-    letter:"A" //letter didefinisikan string
+    letter:"A" 
   }, function(err, data) {
