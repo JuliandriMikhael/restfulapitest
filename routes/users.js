@@ -74,13 +74,16 @@ router.post('/register', function(req, res, next){ // ini untuk register user di
         res.json({succes: false, message: "failed to authencticate token"})
       }else {
         res.json({
-          valid:true
+          valid: true
         });
       }
     })
   }else {
-    return
+    return res.status(403).send({
+      valid: false,
+      message: 'no token provided' 
+    })
   }
-  })
+})
 
 module.exports = router;
