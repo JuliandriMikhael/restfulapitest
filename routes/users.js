@@ -55,7 +55,7 @@ router.post('/register', function(req, res, next){ // ini untuk register user di
             email: user.email}, config.secretkey,{
               expiresIn: 86400
             })
-        //     res.json({
+            res.json({
         //       success: true,
         //       data: {email:user.email},
         //       token:token
