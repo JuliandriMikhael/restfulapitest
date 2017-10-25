@@ -50,8 +50,17 @@ router.post('/register', function(req, res, next){ // ini untuk register user di
         if(user.password != req.body.password){
           res.json({success: false, message: 'auth failed. password is not match'})
         }else {
-      
-        }
+          let token = jwt.sign({
+            _id: user._id,
+            email: user.email}, config.secretkey,{
+              expiresIn: 86400
+            })
+        //     res.json({
+        //       success: true,
+        //       data: {email:user.email},
+        //       token:token
+        //     })
+        // }
       }
 
     })
