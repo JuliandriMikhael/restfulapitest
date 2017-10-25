@@ -60,7 +60,7 @@ router.post('/register', function(req, res, next){ // ini untuk register user di
               data: {email:user.email},
               token:token
             })
-        // }
+         }
       }
 
     })
