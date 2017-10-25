@@ -68,6 +68,13 @@ router.post('/register', function(req, res, next){ // ini untuk register user di
 
   router.post('/check', function(req, res, next){
   let token = req.body.token || req.param('token') || req.headers['x-access-token'];
+  if(token){
+    jwt.verify(token, config.secretkey, function(err, hash){
+      if (err) {
+        res.json({succes: false, message: "failed to authencticate token"})
+      }else {
+        
+      }
   })
 
 module.exports = router;
