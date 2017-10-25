@@ -81,9 +81,15 @@ router.post('/register', function(req, res, next){ // ini untuk register user di
   }else {
     return res.status(403).send({
       valid: false,
-      message: 'no token provided' 
+      message: 'no token provided'
     })
   }
 })
+
+router.get('/destroy', checker, function(req, res, next) {
+  return res.json({
+    logout: true
+  });
+});
 
 module.exports = router;
