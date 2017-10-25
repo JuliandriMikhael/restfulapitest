@@ -67,7 +67,11 @@ router.post('/register', function(req, res, next){ // ini untuk register user di
   }); //fungsi login
 
   router.post('/check', function(req, res, next){
-    
+    User.findOne({
+      email: req.body.email
+    }, function(err, user) {
+
+    })
   })
 
 module.exports = router;
