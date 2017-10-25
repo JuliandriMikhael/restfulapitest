@@ -12,7 +12,7 @@ router.post('/input', function(req, res){
   })
   data.save(function(err){
     if (err) throw err;
-      console.log('User saved succesfully'); 
+      console.log('User saved succesfully');
       res.json({
         success: true,
         message: "data has been added",
@@ -24,3 +24,9 @@ router.post('/input', function(req, res){
       })
   })
 })
+
+//read
+router.get('/browse', function(req, res){ // ini itu cuma percobaan alias prototype
+  Data.findOne({
+    letter:"A" //letter didefinisikan string
+  }, function(err, data) {
