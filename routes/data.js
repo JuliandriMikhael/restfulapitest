@@ -59,3 +59,7 @@ router.put('/edit/:_id', function(req, res){ // edit by id using params
     })
   })
   })
+
+  //add
+  router.post('/add', function(req, res){ // ini itu cuma percobaan alias prototype
+    console.log(req.body.letter);
