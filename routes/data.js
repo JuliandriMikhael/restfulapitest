@@ -39,3 +39,8 @@ router.get('/browse', function(req, res){
     })
   })
 })
+
+//edit
+router.put('/edit/:_id', function(req, res){ // edit by id using params
+  Data.findById(req.params._id, function(err, data) {
+    if (err) throw err;
