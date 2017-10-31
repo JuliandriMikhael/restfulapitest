@@ -63,3 +63,7 @@ router.put('/edit/:_id', function(req, res){ // edit by id using params
   //add
   router.post('/add', function(req, res){ // ini itu cuma percobaan alias prototype
     console.log(req.body.letter);
+    var data = new Data({ //router untuk setup dan login si user
+       letter: req.body.letter,
+       frequency: req.body.frequency
+    })
