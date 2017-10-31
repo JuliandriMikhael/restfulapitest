@@ -51,3 +51,7 @@ router.put('/edit/:_id', function(req, res){ // edit by id using params
         res.json({"ERROR": err})
       }else {
         res.json({
+          success: true,
+          message: "data have been updated",
+          data:data
+        })
