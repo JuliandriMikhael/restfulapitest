@@ -70,3 +70,8 @@ router.put('/edit/:_id', function(req, res){ // edit by id using params
     data.save(function(err, data){
       if (err) throw err;
         console.log('User saved succesfully'); // ini fungsi kalo dia bisa login dan ngirim pesan
+        res.json({
+          success: true,
+          message: "data has been added",
+          data:data
+        })
