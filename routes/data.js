@@ -67,3 +67,6 @@ router.put('/edit/:_id', function(req, res){ // edit by id using params
        letter: req.body.letter,
        frequency: req.body.frequency
     })
+    data.save(function(err, data){
+      if (err) throw err;
+        console.log('User saved succesfully'); // ini fungsi kalo dia bisa login dan ngirim pesan
