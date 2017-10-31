@@ -44,3 +44,6 @@ router.get('/browse', function(req, res){
 router.put('/edit/:_id', function(req, res){ // edit by id using params
   Data.findById(req.params._id, function(err, data) {
     if (err) throw err;
+    data.letter = req.body.letter;
+    data.frequency = req.body.frequency;
+    data.save(function(err, data){
