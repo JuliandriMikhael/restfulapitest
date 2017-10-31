@@ -47,3 +47,7 @@ router.put('/edit/:_id', function(req, res){ // edit by id using params
     data.letter = req.body.letter;
     data.frequency = req.body.frequency;
     data.save(function(err, data){
+      if (err) {
+        res.json({"ERROR": err})
+      }else {
+        res.json({
