@@ -47,6 +47,8 @@ describe('users', function() {
     })
 })
 
-  
+  it('should login using the token provided on users/login POST', (done) => {
+    
+  })
 
 })
