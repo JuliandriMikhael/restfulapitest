@@ -33,7 +33,10 @@ router.post('/register', function(req, res, next){ // ini untuk register user di
         expiresIn: 86400
       })
       res.json({ //hasil yang di tampilkan oleh json berbentuk objek
-        data: {email: user.email},
+        data: {
+          _id: user._id,
+          email: user.email
+        },
         token: token
       })
   })
